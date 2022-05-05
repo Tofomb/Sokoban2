@@ -1,0 +1,41 @@
+html, body, div {
+    height: 100%;
+    margin: 0px;
+}
+
+.grid {
+    display: grid;
+    /*hårdkodad för 19 columner*/
+    grid-template-columns: repeat(19, auto);
+    
+  }
+  .grid > div{
+      text-align: center;
+      /*Hårdkodat för 19*16*/
+      width: 100%/19;
+      height: 100%/16;
+
+  }
+
+  .tile-wall{
+      background-color: #ca7979;
+
+
+
+    }
+  .tile-space{
+      background-color: rgb(254, 254, 254);
+
+  }
+  .tile-goal{
+      background-color: lightblue;
+  }
+  .entity-player{
+      background-color: blueviolet;
+  }
+  .entity-block{
+      background-color: rgb(210, 204, 19);
+  }
+  .entity-block-goal{
+      background-color: orange;
+  }
