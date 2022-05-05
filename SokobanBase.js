@@ -363,6 +363,41 @@ var Tiles = {
     ],
   };
 
+//Testmap for other values
+  var tileMap02 = {
+    width: 4,
+    height: 4,
+    mapGrid: [
+      [
+        ["W"],
+        ["W"],
+        ["W"],
+        ["W"],
+      ],
+      [
+        ["W"],
+        [" "],
+        ["G"],
+        ["W"],
+      ],
+      [
+        ["W"],
+        [" "],
+        ["P"],
+        ["W"],
+      ],
+      [
+        ["W"],
+        ["W"],
+        ["W"],
+        ["W"],
+      ],
+    ],
+  };
+
+      
+
+
 
 ////Map Maker
 
@@ -397,7 +432,9 @@ for (let iY = 0; iY < tileMap.height; iY++) {
         div.className = Tiles.Goal;
     }
     else if(tileMap.mapGrid[iY][iX] == "D"){ //D för done?
-        div.className = Entities.BlockDone;
+        div.classList.add(Entities.BlockDone);
+        div.classList.add(Entities.Block);
+        div.classList.add(Tiles.Goal);
     }
     
     else{
@@ -415,7 +452,30 @@ for (let iY = 0; iY < tileMap.height; iY++) {
 
   }
 
+/*Dynamic CSS Style for created elements*/
+    let mil = document.getElementById("myItemList");
+    mil.style.display="grid";
+    mil.style.gridTemplateColumns="repeat("+tileMap.width+",auto)";
 
+    let divlist = mil.querySelector("div");
+    divlist.style.textAlign = "center";
+    divlist.style.width ="100%/"+tileMap.width;
+    divlist.style.height ="100%/"+tileMap.height;
+
+/*.grid {
+    display: grid;
+    /*hårdkodad för 19 columner
+    grid-template-columns: repeat(19, auto);
+    
+  }
+  .grid > div{
+      text-align: center;
+      /*Hårdkodat för 19*16
+      width: 100%/19;
+      height: 100%/16;
+
+  }
+*/
 
 };
   

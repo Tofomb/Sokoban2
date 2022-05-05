@@ -2,21 +2,21 @@ html, body, div {
     height: 100%;
     margin: 0px;
 }
-
-.grid {
+/*added this code to the map maker to make it more dynamic with different map-sizes*/
+/*.grid {
     display: grid;
-    /*hårdkodad för 19 columner*/
+    /*hårdkodad för 19 columner
     grid-template-columns: repeat(19, auto);
     
   }
   .grid > div{
       text-align: center;
-      /*Hårdkodat för 19*16*/
+      /*Hårdkodat för 19*16
       width: 100%/19;
       height: 100%/16;
 
   }
-
+*/
   .tile-wall{
       background-color: #ca7979;
 
@@ -28,14 +28,14 @@ html, body, div {
 
   }
   .tile-goal{
-      background-color: lightblue;
+      background-color: rgb(134, 118, 252);
   }
   .entity-player{
-      background-color: blueviolet;
+      background-color: #70b1a5;
   }
   .entity-block{
-      background-color: rgb(210, 204, 19);
+      background-color: rgb(255, 187, 0);
   }
   .entity-block-goal{
-      background-color: orange;
+      background-color: greenyellow;
   }
